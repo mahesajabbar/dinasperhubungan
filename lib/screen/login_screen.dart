@@ -5,9 +5,25 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xFF2F318B),
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(
+          'Login',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+        ),
+        elevation: 3,
+        backgroundColor: Colors.amber,
+        actions: const [
+          Icon(
+            Icons.notifications,
+            color: Colors.white,
+          ),
+          SizedBox(width: 8),
+        ],
+      ),
+      backgroundColor: const Color(0xFF2F318B),
+      body: const Center(
         child: MyCard(),
       ),
     );
@@ -29,18 +45,13 @@ class MyCard extends StatelessWidget {
             Radius.circular(44.0),
           ),
         ),
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Image.asset('assets/dinas-login.png'),
-            const SizedBox(width: 20),
-            const Text(
-              'LOGIN',
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ),
+        padding: const EdgeInsets.all(27.85),
+        child: Image.asset('assets/images/dinas-login.png'),
+        // const Text(
+        //   'LOGIN',
+        //   style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+        //   textAlign: TextAlign.center,
+        // ),
       ),
     );
   }
